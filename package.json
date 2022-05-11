@@ -1,0 +1,24 @@
+{
+  "name": "documenter",
+  "version": "1.0.0",
+  "description": "create documentation rapidly",
+  "main": "documenter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taymazmostafaei/Documenter.git"
+  },
+  "keywords": [
+    "documentation",
+    "create",
+    "documentation"
+  ],
+  "author": "taymaz mostafaei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taymazmostafaei/Documenter/issues"
+  },
+  "homepage": "https://github.com/taymazmostafaei/Documenter#readme"
+}
