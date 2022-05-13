@@ -1,7 +1,12 @@
+const FileReader = require('./FileReader');
+const Documenter = {
+    run:(files,options,callback)=>{
 
-const documenter = {
-    run:(files,options)=>{
+        FileReader.run(files,function(reads){
+            var result = reads
+            return callback(result)
+        })
 
     }
 }
-exports.moudle = documenter
+module.exports = Documenter
