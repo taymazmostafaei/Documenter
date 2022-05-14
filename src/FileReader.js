@@ -1,6 +1,6 @@
 const Compiler = require('./compiler/Compiler.js')
 const FileReader = {
-    run:(files, callback) => {
+    run: (files, callback) => {
         var result = []
 
         files.forEach(file => {
@@ -10,17 +10,19 @@ const FileReader = {
             });
 
             lineReader.on('line', function (line) {
-                Compiler.run(line,function(compield){
-                   html += compield
+                Compiler.run(line, function (compield) {
+                    html += compield
                 })
             });
-            lineReader.on("close",function () { 
-                result.push('title',html)
-             })
-
+            lineReader.on("close", function () {
+                result.push(['title', html])
+            })
         });
 
-        return callback(result)
+        setTimeout(function () {
+            return callback(result)
+        }, files.length * 100)
+
     }
 }
 module.exports = FileReader

@@ -1,8 +1,8 @@
 const FileReader = require('./FileReader');
 const Documenter = {
-    run:(files,options,callback)=>{
+    run: (files, options, callback) => {
 
-        FileReader.run(files,function(reads){
+        FileReader.run(files, function (reads) {
             var result = reads
             return callback(result)
         })
