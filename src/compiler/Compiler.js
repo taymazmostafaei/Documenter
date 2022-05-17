@@ -64,6 +64,20 @@ const Compiler = {
                 attr: ['src', value]
             }
         }
+        if (sign == 'v') {
+            return {
+                tag: 'video',
+                value: false,
+                attr: ['src', value]
+            }
+        }
+        if (sign == 'a') {
+            return {
+                tag: 'audio',
+                value: false,
+                attr: ['src', value]
+            }
+        }
         if (sign == '') {
             return false
         }
