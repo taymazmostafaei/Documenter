@@ -3,7 +3,9 @@ const FileReader = {
     run: (files, callback) => {
         var result = []
 
-        files.forEach(file => {
+        files.forEach(data => {
+            var file = data[0]
+            var title = data[1]
             var html = ''
             var lineReader = require('readline').createInterface({
                 input: require('fs').createReadStream(file)
@@ -15,7 +17,7 @@ const FileReader = {
                 })
             });
             lineReader.on("close", function () {
-                result.push(['title', html])
+                result.push([title, html])
             })
         });
 
