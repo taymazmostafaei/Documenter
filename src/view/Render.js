@@ -15,14 +15,14 @@ const Render = (data, options) => {
 
 async function RenderStart(data) {
     var display = '';
-    var htmlPagePart1 = fs.readFileSync(__dirname + 'demo/part1.html','utf-8');
-    var htmlPagePart2 = fs.readFileSync(__dirname + 'demo/part2.html','utf-8');
+    var htmlPagePart1 = fs.readFileSync('./view/demo/part1.html','utf-8');
+    var htmlPagePart2 = fs.readFileSync('./view/demo/part2.html','utf-8');
 
     await data.forEach(element => {
-        display = +component(element[0], element[1]);
+        display += component(element[0], element[1]);
     });
 
-    var finalDisplay = htmlPagePart1 + display + htmlPagePart2;
+    var finalDisplay = await htmlPagePart1 + display + htmlPagePart2;
 
     return finalDisplay;
 }
